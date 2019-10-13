@@ -8,3 +8,13 @@ C:\Users\Hoan\source\repos\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\D
 C:\Users\Hoan\source\repos\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.csproj.CoreCompileInputs.cache
 C:\Users\Hoan\source\repos\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.exe
 C:\Users\Hoan\source\repos\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.pdb
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\bin\Debug\ChuanHoaForPhuongPhuong.exe.config
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\bin\Debug\ChuanHoaForPhuongPhuong.exe
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\bin\Debug\ChuanHoaForPhuongPhuong.pdb
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.csprojAssemblyReference.cache
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.Form1.resources
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.Properties.Resources.resources
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.csproj.GenerateResource.cache
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.csproj.CoreCompileInputs.cache
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.exe
+C:\Users\Hoan\Documents\GitHub\thirdNormal\ChuanHoaForPhuongPhuong\ChuanHoaForPhuongPhuong\obj\Debug\ChuanHoaForPhuongPhuong.pdb
