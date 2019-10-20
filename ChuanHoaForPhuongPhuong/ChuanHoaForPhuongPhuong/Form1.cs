@@ -365,6 +365,7 @@ namespace ChuanHoaForPhuongPhuong
                     xuatElement(First, Last, Properties.Settings.Default.nkey);
                 }
             }
+            btnThirdnormal.Enabled = true;
         }
 
 
@@ -388,6 +389,10 @@ namespace ChuanHoaForPhuongPhuong
             {
                 if (resultF[i] != null)
                 {
+                    Label labelR = new Label();
+                    labelR.Location = new Point(positionResultfX-100, positionResultfY + 26);
+                    labelR.Text = "R" + (i+1).ToString();
+                    panel1.Controls.Add(labelR);
 
 
                     Label label1 = new Label();
