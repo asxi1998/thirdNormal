@@ -442,7 +442,6 @@ namespace ChuanHoaForPhuongPhuong
 
                     chuanhoa.thucHienChuanHoa(quanhe,khoa,nKhoa,phuthuoc,phuthuoc1,nHamPhuThuoc, First, Last, Properties.Settings.Default.nkey);
 
-                    MessageBox.Show(Properties.Settings.Default.nkey.ToString());
                     xuatElement(First, Last, Properties.Settings.Default.nkey);
                 }
             }
@@ -453,6 +452,18 @@ namespace ChuanHoaForPhuongPhuong
         int positionResultfY = 328;
         public void xuatElement(Element[] resultF, Element[] resultL,int nKey)
         {
+            Label labelKhoa = new Label();
+            Label labelThuoctinh = new Label();
+
+            labelKhoa.Location = new Point(positionResultfX, positionResultfY);
+            labelThuoctinh.Location = new Point(positionResultfX + 127 +  127 + 127, positionResultfY);
+
+            labelKhoa.Text = "KHOA CHINH";
+            labelThuoctinh.Text = "THUOC TINH";
+
+            panel1.Controls.Add(labelKhoa);
+            panel1.Controls.Add(labelThuoctinh);
+
             for (int i = 0; i <= nKey; i++)
             {
                 if (resultF[i] != null)
@@ -466,12 +477,12 @@ namespace ChuanHoaForPhuongPhuong
                     Label label5 = new Label();
                     Label label6 = new Label();
 
-                    label1.Location = new Point(positionResultfX, positionResultfY);
-                    label2.Location = new Point(positionResultfX + 127, positionResultfY);
-                    label3.Location = new Point(positionResultfX + 127 + 127, positionResultfY);
-                    label4.Location = new Point(positionResultfX + 127 + 127 + 127, positionResultfY);
-                    label5.Location = new Point(positionResultfX + 127 + 127 + 127 + 127, positionResultfY);
-                    label6.Location = new Point(positionResultfX + 127 + 127 + 127 + 127 + 127, positionResultfY);
+                    label1.Location = new Point(positionResultfX, positionResultfY + 26);
+                    label2.Location = new Point(positionResultfX + 127, positionResultfY + 26);
+                    label3.Location = new Point(positionResultfX + 127 + 127, positionResultfY + 26);
+                    label4.Location = new Point(positionResultfX + 127 + 127 + 127, positionResultfY + 26);
+                    label5.Location = new Point(positionResultfX + 127 + 127 + 127 + 127, positionResultfY + 26);
+                    label6.Location = new Point(positionResultfX + 127 + 127 + 127 + 127 + 127, positionResultfY + 26);
 
                     
 
