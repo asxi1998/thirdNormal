@@ -152,9 +152,6 @@ namespace ChuanHoaForPhuongPhuong
             addcombo(comboBox4);
             addcombo(comboBox5);
             addcombo(comboBox6);
-            addcombo(comboBox10);
-            addcombo(comboBox11);
-            addcombo(comboBox12);
 
 
             foreach (Control button in panelNhapQuanHe.Controls)
@@ -182,7 +179,7 @@ namespace ChuanHoaForPhuongPhuong
         {
             if (flag == 1)
             {
-                if (ktPhuThuocHam() == 1 && ktKhoa() == 1)
+                if (ktPhuThuocHam() == 1)
                 {
                     string[] quanhe=new string[10];
                     Element[] khoa = new Element[6];
@@ -346,101 +343,24 @@ namespace ChuanHoaForPhuongPhuong
                     phuthuoc1[4] = elementphuthuocham4;
                     phuthuoc1[5] = elementphuthuocham5;
 
+                    
+                    //----------------------------------------------
+                    //int c = -1;
+                    //foreach (Control control in panelNhapQuanHe.Controls)
+                    //{
+                    //    if(control.GetType()==typeof(TextBox)&& control.Text.Trim().Length>0)
+                    //    {
+                    //        quanhe[++c] = control.Text.Trim().ToString();
+                    //    }
+                    //}
 
-                    //-------------------------------------------------------
-
-                    Element elementkhoa0 = new Element();
-                    Element elementkhoa1 = new Element();
-                    Element elementkhoa2 = new Element();
-                    Element elementkhoa3 = new Element();
-                    Element elementkhoa4 = new Element();
-                    Element elementkhoa5 = new Element();
-
-                    string[] str111 = new string[3];
-                    string[] str222 = new string[3];
-                    string[] str333 = new string[3];
-                    string[] str444 = new string[3];
-                    string[] str555 = new string[3];
-                    string[] str666 = new string[3];
-
-                    int b1 = -1;
-                    int b2 = -1;
-                    int b3 = -1;
-                    int b4 = -1;
-                    int b5 = -1;
-                    int b6 = -1;
-                    foreach (Control control in panelkhoa.Controls)
-                    {
-                        if (control.GetType() == typeof(ComboBox) && control.Text.Trim().Length > 0)
-                        {
-                            if (control.Location.Y < 5)
-                            {
-                                str111[++b1] = control.Text.Trim().ToString();
-                            }
-                            else
-                            {
-                                if (control.Location.Y < 32)
-                                {
-                                    str222[++b2] = control.Text.Trim().ToString();
-                                }
-                                else
-                                {
-                                    if (control.Location.Y < 59)
-                                    {
-                                        str333[++b3] = control.Text.Trim().ToString();
-                                    }
-                                    else
-                                    {
-                                        if (control.Location.Y < 86)
-                                        {
-                                            str444[++b4] = control.Text.Trim().ToString();
-                                        }
-                                        else
-                                        {
-                                            if (control.Location.Y < 113)
-                                            {
-                                                str555[++b5] = control.Text.Trim().ToString();
-                                            }
-                                            else
-                                            {
-                                                str666[++b6] = control.Text.Trim().ToString();
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    elementkhoa0.SetElement(str111);
-                    elementkhoa1.SetElement(str222);
-                    elementkhoa2.SetElement(str333);
-                    elementkhoa3.SetElement(str444);
-                    elementkhoa4.SetElement(str555);
-                    elementkhoa5.SetElement(str666);
-
-                    khoa[0] = elementphuthuocham0;
-                    khoa[1] = elementphuthuocham1;
-                    khoa[2] = elementphuthuocham2;
-                    khoa[3] = elementphuthuocham3;
-                    khoa[4] = elementphuthuocham4;
-                    khoa[5] = elementphuthuocham5;
-
-                    int c = -1;
-                    foreach (Control control in panelNhapQuanHe.Controls)
-                    {
-                        if(control.GetType()==typeof(TextBox)&& control.Text.Trim().Length>0)
-                        {
-                            quanhe[++c] = control.Text.Trim().ToString();
-                        }
-                    }
-
-
+                    //--------------------------------------------------
                     Element[] First = new Element[6];
                     Element[] Last = new Element[6];
 
                     Properties.Settings.Default.nkey = 10;
 
-                    chuanhoa.thucHienChuanHoa(quanhe,khoa,nKhoa,phuthuoc,phuthuoc1,nHamPhuThuoc, First, Last, Properties.Settings.Default.nkey);
+                    chuanhoa.thucHienChuanHoa(phuthuoc,phuthuoc1,nHamPhuThuoc, First, Last, Properties.Settings.Default.nkey);
 
                     xuatElement(First, Last, Properties.Settings.Default.nkey);
                 }
@@ -545,10 +465,6 @@ namespace ChuanHoaForPhuongPhuong
                     {
                         label6.Text = element2.GetElement()[2].Trim().ToString();
                     }
-
-
-                   
-                    
                     
 
                     panel1.Controls.Add(label1);
@@ -572,52 +488,6 @@ namespace ChuanHoaForPhuongPhuong
             }
             return 0;
         }
-        public int ktKhoa()
-        {
-            foreach (Control control in panelkhoa.Controls)
-            {
-                if (control.GetType() == typeof(ComboBox) && control.Text.Trim().Length > 0)
-                    return 1;
-            }
-            return 0;
-        }
-
-        int nKhoa = 1;
-
-        int locationX2=0;
-        int locationY2=0;
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (flag == 1)
-            {
-                locationY2 += 26;
-
-                ComboBox comboBox10 = new ComboBox();
-                comboBox10.Location = new Point(locationX2, locationY2);
-                ComboBox comboBox11 = new ComboBox();
-                comboBox11.Location = new Point(locationX2 + 127, locationY2);
-                ComboBox comboBox12 = new ComboBox();
-                comboBox12.Location = new Point(locationX2 + 254, locationY2);
-
-
-                addcombo(comboBox10);
-                addcombo(comboBox11);
-                addcombo(comboBox12);
-
-                panelkhoa.Controls.Add(comboBox10);
-                panelkhoa.Controls.Add(comboBox11);
-                panelkhoa.Controls.Add(comboBox12);
-
-
-                button4.Location = new Point(locationX2, locationY2 + 26);
-
-
-
-                nKhoa++;
-            }
-        }
-
       
         public void addcombo(ComboBox abc)
         {
@@ -625,6 +495,6 @@ namespace ChuanHoaForPhuongPhuong
                 abc.Items.Add(combo[i]);
         }
 
-
+    
     }
 }

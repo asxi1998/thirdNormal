@@ -13,7 +13,7 @@ namespace ChuanHoaForPhuongPhuong
         {
 
         }
-        public void thucHienChuanHoa(string[] quanhe, Element[] khoa, int nKhoa, Element[] hamPhuThuocF, Element[] hamPhuThuocL, int nHamPhuThuoc, Element[] PrimaryKey, Element[] ForenceKey, int nKey)
+        public void thucHienChuanHoa( Element[] hamPhuThuocF, Element[] hamPhuThuocL, int nHamPhuThuoc, Element[] PrimaryKey, Element[] ForenceKey, int nKey)
         {
             int key1 = -1;
             for (int i = 0; i < nHamPhuThuoc - 1; i++)
