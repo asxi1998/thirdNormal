@@ -31,13 +31,13 @@ namespace ChuanHoaForPhuongPhuong
             //tạo ra textbox
             locationY += 26;
             TextBox txt = new TextBox();
-            txt.Location=new Point(locationX,locationY);
+            txt.Location = new Point(locationX, locationY);
             txt.Size = new Size(121, 20);
-            
+
             panelNhapQuanHe.Controls.Add(txt);
             //tạo ra button
             Button btn = new Button();
-            btn.Location = new Point(locationX+127,locationY);
+            btn.Location = new Point(locationX + 127, locationY);
             btn.Text = "Xóa";
 
             panelNhapQuanHe.Controls.Add(btn);
@@ -45,21 +45,21 @@ namespace ChuanHoaForPhuongPhuong
             //bat su kien click cua button
             btn.Click += Btn_Click;
 
-           
 
-            btnthem1quanhe.Location = new Point(locationX, locationY+26);
 
-            
+            btnthem1quanhe.Location = new Point(locationX, locationY + 26);
+
+
         }
 
-       
+
         private void Btn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            foreach(Control textbox in panelNhapQuanHe.Controls)
+            foreach (Control textbox in panelNhapQuanHe.Controls)
             {
-                if(textbox.GetType()==typeof(TextBox))
-                    if(textbox.Location.Y==btn.Location.Y)
+                if (textbox.GetType() == typeof(TextBox))
+                    if (textbox.Location.Y == btn.Location.Y)
                     {
                         panelNhapQuanHe.Controls.Remove(textbox);
                         panelNhapQuanHe.Controls.Remove(btn);
@@ -222,9 +222,9 @@ namespace ChuanHoaForPhuongPhuong
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
-       
+
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -234,106 +234,31 @@ namespace ChuanHoaForPhuongPhuong
         {
             if (flag == 1)
             {
-                if (txtF.Text.Length>0)
+                if (txtF.Text.Length > 0)
                 {
-                    string[] quanhe=new string[10];
+                    string[] quanhe = new string[10];
                     Element[] khoa = new Element[6];
                     Element[] phuthuoc = new Element[6];
                     Element[] phuthuoc1 = new Element[6];
 
-                    //Element elementphuthuoc0 = new Element();
-                    //Element elementphuthuoc1 = new Element();
-                    //Element elementphuthuoc2 = new Element();
-                    //Element elementphuthuoc3 = new Element();
-                    //Element elementphuthuoc4 = new Element();
-                    //Element elementphuthuoc5 = new Element();
-
-                    //string[] str1 = new string[3];
-                    //string[] str2 = new string[3];
-                    //string[] str3 = new string[3];
-                    //string[] str4 = new string[3];
-                    //string[] str5 = new string[3];
-                    //string[] str6 = new string[3];
-                    //int a1 = -1;
-                    //int a2 = -1;
-                    //int a3 = -1;
-                    //int a4 = -1;
-                    //int a5 = -1;
-                    //int a6 = -1;
-                    //foreach (Control control in panelphuthuocham.Controls)
-                    //{
-                    //    if (control.GetType() == typeof(ComboBox) && control.Text.Trim().Length > 0)
-                    //    {
-                    //        if (control.Location.Y < 5)
-                    //        {
-                    //            str1[++a1] = control.Text.Trim().ToString();
-                                
-                    //        }
-                    //        else
-                    //        {
-                    //            if (control.Location.Y < 32)
-                    //            {
-                    //                str2[++a2] = control.Text.Trim().ToString();
-                    //            }
-                    //            else
-                    //            {
-                    //                if (control.Location.Y < 59)
-                    //                {
-                    //                    str3[++a3] = control.Text.Trim().ToString();
-                    //                }
-                    //                else
-                    //                {
-                    //                    if (control.Location.Y < 86)
-                    //                    {
-                    //                        str4[++a4] = control.Text.Trim().ToString();
-                                           
-                    //                    }
-                    //                    else
-                    //                    {
-                    //                        if (control.Location.Y < 113)
-                    //                        {
-                    //                            str5[++a5] = control.Text.Trim().ToString();
-                    //                        }
-                    //                        else
-                    //                        {
-                    //                            str6[++a6] = control.Text.Trim().ToString();
-                    //                        }
-                    //                    }
-                    //                }
-                    //            }
-                    //        }
-                    //    }
-                    //}
-                    //elementphuthuoc0.SetElement(str1);
-                    //elementphuthuoc1.SetElement(str2);
-                    //elementphuthuoc2.SetElement(str3);
-                    //elementphuthuoc3.SetElement(str4);
-                    //elementphuthuoc4.SetElement(str5);
-                    //elementphuthuoc5.SetElement(str6);
-
-                    //phuthuoc[0] = elementphuthuoc0;
-                    //phuthuoc[1] = elementphuthuoc1;
-                    //phuthuoc[2] = elementphuthuoc2;
-                    //phuthuoc[3] = elementphuthuoc3;
-                    //phuthuoc[4] = elementphuthuoc4;
-                    //phuthuoc[5] = elementphuthuoc5;
+                   
 
                     string chuoi = txtF.Text;
-                    if(chuoi.Length>0)
+                    if (chuoi.Length > 0)
                     {
                         string[] arrListStr = chuoi.Split(';');
-                        for( int i=0;i<arrListStr.Length;i++)
+                        for (int i = 0; i < arrListStr.Length; i++)
                         {
                             string[] arrListStrChild = arrListStr[i].ToString().Split('-');
 
                             string[] str = new string[10];
                             int j = -1;
-                            while (arrListStrChild[0].Length>0)
+                            while (arrListStrChild[0].Length > 0)
                             {
                                 //lấy add vào str
-                                str[++j]= arrListStrChild[0].Substring(0,1).ToString();
+                                str[++j] = arrListStrChild[0].Substring(0, 1).ToString();
                                 //cắt chuổi arrListStrChild[0].Substring(0,1).ToString()
-                                arrListStrChild[0]=arrListStrChild[0].Replace(str[j].ToString(), string.Empty);
+                                arrListStrChild[0] = arrListStrChild[0].Replace(str[j].ToString(), string.Empty);
                             }
                             Element elementphuthuoc = new Element();
                             elementphuthuoc.SetElement(str);
@@ -344,9 +269,9 @@ namespace ChuanHoaForPhuongPhuong
                             while (arrListStrChild[1].Length > 0)
                             {
                                 //lấy add vào str
-                                strHam[++k] = arrListStrChild[1].Substring(0,1).ToString();
+                                strHam[++k] = arrListStrChild[1].Substring(0, 1).ToString();
                                 //cắt chuổi
-                                arrListStrChild[1]=arrListStrChild[1].Replace(strHam[k].ToString(), string.Empty);
+                                arrListStrChild[1] = arrListStrChild[1].Replace(strHam[k].ToString(), string.Empty);
                             }
                             Element elementphuthuocham = new Element();
                             elementphuthuocham.SetElement(strHam);
@@ -354,95 +279,7 @@ namespace ChuanHoaForPhuongPhuong
                         }
                     }
 
-                    //--------------------------------------------------------------------------
-
-
-                    //Element elementphuthuocham0 = new Element();
-                    //Element elementphuthuocham1 = new Element();
-                    //Element elementphuthuocham2 = new Element();
-                    //Element elementphuthuocham3 = new Element();
-                    //Element elementphuthuocham4 = new Element();
-                    //Element elementphuthuocham5 = new Element();
-
-                    //string[] str11 = new string[3];
-                    //string[] str22 = new string[3];
-                    //string[] str33 = new string[3];
-                    //string[] str44 = new string[3];
-                    //string[] str55 = new string[3];
-                    //string[] str66 = new string[3];
-
-                    //int aa1 = -1;
-                    //int aa2 = -1;
-                    //int aa3 = -1;
-                    //int aa4 = -1;
-                    //int aa5 = -1;
-                    //int aa6 = -1;
-                    //foreach (Control control in panelphuthuocham2.Controls)
-                    //{
-                    //    if (control.GetType() == typeof(ComboBox) && control.Text.Trim().Length > 0)
-                    //    {
-                    //        if (control.Location.Y < 5)
-                    //        {
-                    //            str11[++aa1] = control.Text.Trim().ToString();
-                    //        }
-                    //        else
-                    //        {
-                    //            if (control.Location.Y < 32)
-                    //            {
-                    //                str22[++aa2] = control.Text.Trim().ToString();
-                    //            }
-                    //            else
-                    //            {
-                    //                if (control.Location.Y < 59)
-                    //                {
-                    //                    str33[++aa3] = control.Text.Trim().ToString();
-                    //                }
-                    //                else
-                    //                {
-                    //                    if (control.Location.Y < 86)
-                    //                    {
-                    //                        str44[++aa4] = control.Text.Trim().ToString();
-                    //                    }
-                    //                    else
-                    //                    {
-                    //                        if (control.Location.Y < 113)
-                    //                        {
-                    //                            str55[++aa5] = control.Text.Trim().ToString();
-                    //                        }
-                    //                        else
-                    //                        {
-                    //                            str66[++aa6] = control.Text.Trim().ToString();
-                    //                        }
-                    //                    }
-                    //                }
-                    //            }
-                    //        }
-                    //    }
-                    //}
-                    //elementphuthuocham0.SetElement(str11);
-                    //elementphuthuocham1.SetElement(str22);
-                    //elementphuthuocham2.SetElement(str33);
-                    //elementphuthuocham3.SetElement(str44);
-                    //elementphuthuocham4.SetElement(str55);
-                    //elementphuthuocham5.SetElement(str66);
-
-                    //phuthuoc1[0] = elementphuthuocham0;
-                    //phuthuoc1[1] = elementphuthuocham1;
-                    //phuthuoc1[2] = elementphuthuocham2;
-                    //phuthuoc1[3] = elementphuthuocham3;
-                    //phuthuoc1[4] = elementphuthuocham4;
-                    //phuthuoc1[5] = elementphuthuocham5;
-
                     
-                    //----------------------------------------------
-                    //int c = -1;
-                    //foreach (Control control in panelNhapQuanHe.Controls)
-                    //{
-                    //    if(control.GetType()==typeof(TextBox)&& control.Text.Trim().Length>0)
-                    //    {
-                    //        quanhe[++c] = control.Text.Trim().ToString();
-                    //    }
-                    //}
 
                     //--------------------------------------------------
                     Element[] First = new Element[10];
@@ -450,7 +287,7 @@ namespace ChuanHoaForPhuongPhuong
 
                     Properties.Settings.Default.nkey = 10;
 
-                    chuanhoa.thucHienChuanHoa(phuthuoc,phuthuoc1,nHamPhuThuoc, First, Last, Properties.Settings.Default.nkey);
+                    chuanhoa.thucHienChuanHoa(phuthuoc, phuthuoc1, nHamPhuThuoc, First, Last, Properties.Settings.Default.nkey);
 
                     xuatElement(First, Last, Properties.Settings.Default.nkey);
                 }
@@ -458,130 +295,109 @@ namespace ChuanHoaForPhuongPhuong
             btnThirdnormal.Enabled = true;
         }
 
-
-        int positionResultfX=477;
+        int num = 10;
+        private int ktchuoiNull(string[] str1)
+        {
+            string[] str2 = new string[10];
+            for (int i = 0; i < str1.Count(); i++)
+            {
+                if (str1[i] != str2[i])
+                    return 0;
+            }
+            return 1;
+        }
+        int positionResultfX = 477;
         int positionResultfY = 328;
-        public void xuatElement(Element[] resultF, Element[] resultL,int nKey)
+        public void xuatElement(Element[] resultF, Element[] resultL, int nKey)
         {
             Label labelKhoa = new Label();
             Label labelThuoctinh = new Label();
 
             labelKhoa.Location = new Point(positionResultfX, positionResultfY);
-            labelThuoctinh.Location = new Point(positionResultfX + 127 +  127 + 127, positionResultfY);
+            labelThuoctinh.Location = new Point(positionResultfX + 127, positionResultfY);
 
             labelKhoa.Text = "KHOA CHINH";
             labelThuoctinh.Text = "THUOC TINH";
 
             panel1.Controls.Add(labelKhoa);
             panel1.Controls.Add(labelThuoctinh);
-
+            int minuscount = 0;
             for (int i = 0; i <= nKey; i++)
             {
                 if (resultF[i] != null)
                 {
-                    Label labelR = new Label();
-                    labelR.Location = new Point(positionResultfX-100, positionResultfY + 26);
-                    labelR.Text = "R" + (i+1).ToString();
-                    panel1.Controls.Add(labelR);
-
-
-                    Label label1 = new Label();
-                    Label label2 = new Label();
-                    Label label3 = new Label();
-                    Label label4 = new Label();
-                    Label label5 = new Label();
-                    Label label6 = new Label();
-
-                    label1.Location = new Point(positionResultfX, positionResultfY + 26);
-                    label2.Location = new Point(positionResultfX + 127, positionResultfY + 26);
-                    label3.Location = new Point(positionResultfX + 127 + 127, positionResultfY + 26);
-                    label4.Location = new Point(positionResultfX + 127 + 127 + 127, positionResultfY + 26);
-                    label5.Location = new Point(positionResultfX + 127 + 127 + 127 + 127, positionResultfY + 26);
-                    label6.Location = new Point(positionResultfX + 127 + 127 + 127 + 127 + 127, positionResultfY + 26);
-
-                    
-
-                    label1.Font = new Font(label1.Font, FontStyle.Underline);
-                    label2.Font = new Font(label2.Font, FontStyle.Underline);
-                    label3.Font = new Font(label3.Font, FontStyle.Underline);
-
-                    Element element1 = new Element();
-                    element1.SetElement(resultF[i].GetElement());
-                    Element element2 = new Element();
-                    element2.SetElement(resultL[i].GetElement());
-
-
-
-                    if(element1.GetElement()[0]==null)
+                    if (ktchuoiNull(resultF[i].GetElement()) == 0 && ktchuoiNull(resultL[i].GetElement()) == 0)
                     {
-                        label1.Text = "";
+                        Label labelR = new Label();
+                        labelR.Location = new Point(positionResultfX - 100, positionResultfY + 26);
+                        labelR.Text = "R" + (i + 1- minuscount).ToString();
+                        panel1.Controls.Add(labelR);
+
+
+                        Label label1 = new Label();
+                     
+                        Label label4 = new Label();
+                       
+                        label1.Location = new Point(positionResultfX, positionResultfY + 26);
+                      
+                        label4.Location = new Point(positionResultfX + 127, positionResultfY + 26);
+                     
+
+
+                        label1.Font = new Font(label1.Font, FontStyle.Underline);
+                      
+
+                        Element element1 = new Element();
+                        element1.SetElement(resultF[i].GetElement());
+                        Element element2 = new Element();
+                        element2.SetElement(resultL[i].GetElement());
+
+
+                        for (int p = 0; p < num; p++)
+                        {
+                            if (element1.GetElement()[p] == null)
+                            {
+                            }
+                            else
+                            {
+                                label1.Text += element1.GetElement()[p].Trim().ToString();
+                            }
+                        }
+                        for (int p = 0; p < num; p++)
+                        {
+                            if (element2.GetElement()[p] == null)
+                            {
+                            }
+                            else
+                            {
+                                label4.Text += element2.GetElement()[p].Trim().ToString();
+                            }
+                        }
+                      
+
+
+                        panel1.Controls.Add(label1);
+                      
+                        panel1.Controls.Add(label4);
+                       
+                        positionResultfY += 26;
                     }
                     else
                     {
-                        label1.Text = element1.GetElement()[0].Trim().ToString();
+                        //giảm khi có hàm R rổng
+                        minuscount += 1;
                     }
-                    if (element1.GetElement()[1] == null)
-                    {
-                        label2.Text = "";
-                    }
-                    else
-                    {
-                        label2.Text = element1.GetElement()[1].Trim().ToString();
-                    }
-                    if (element1.GetElement()[2] == null)
-                    {
-                        label3.Text = "";
-                    }
-                    else
-                    {
-                        label3.Text = element1.GetElement()[2].Trim().ToString();
-                    }
-                    if (element2.GetElement()[0] == null)
-                    {
-                        label4.Text = "";
-                    }
-                    else
-                    {
-                        label4.Text = element2.GetElement()[0].Trim().ToString();
-                    }
-                    if (element2.GetElement()[1] == null)
-                    {
-                        label5.Text = "";
-                    }
-                    else
-                    {
-                        label5.Text = element2.GetElement()[1].Trim().ToString();
-                    }
-                    if (element2.GetElement()[2] == null)
-                    {
-                        label6.Text = "";
-                    }
-                    else
-                    {
-                        label6.Text = element2.GetElement()[2].Trim().ToString();
-                    }
-                    
-
-                    panel1.Controls.Add(label1);
-                    panel1.Controls.Add(label2);
-                    panel1.Controls.Add(label3);
-                    panel1.Controls.Add(label4);
-                    panel1.Controls.Add(label5);
-                    panel1.Controls.Add(label6);
                 }
-
-                positionResultfY += 26;
             }
         }
 
-       
-      
+
+
         public void addcombo(ComboBox abc)
         {
             for (int i = 0; i < combo.Count; i++)
                 abc.Items.Add(combo[i]);
         }
 
-    
     }
 }
