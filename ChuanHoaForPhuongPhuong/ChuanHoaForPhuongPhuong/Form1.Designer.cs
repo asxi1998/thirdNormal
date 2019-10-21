@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtF = new System.Windows.Forms.TextBox();
             this.panelphuthuocham2 = new System.Windows.Forms.Panel();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -49,7 +51,6 @@
             this.txtnhapquanhe = new System.Windows.Forms.TextBox();
             this.btnthem1quanhe = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelphuthuocham2.SuspendLayout();
@@ -71,6 +72,16 @@
             this.panel1.Size = new System.Drawing.Size(1189, 505);
             this.panel1.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(493, 297);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Kết quả:";
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(183, 348);
@@ -83,13 +94,22 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtF);
             this.panel3.Controls.Add(this.panelphuthuocham2);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.panelphuthuocham);
             this.panel3.Location = new System.Drawing.Point(335, 33);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(854, 235);
+            this.panel3.Size = new System.Drawing.Size(832, 235);
             this.panel3.TabIndex = 3;
+            // 
+            // txtF
+            // 
+            this.txtF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtF.Location = new System.Drawing.Point(15, 150);
+            this.txtF.Name = "txtF";
+            this.txtF.Size = new System.Drawing.Size(778, 29);
+            this.txtF.TabIndex = 4;
             // 
             // panelphuthuocham2
             // 
@@ -98,7 +118,7 @@
             this.panelphuthuocham2.Controls.Add(this.comboBox6);
             this.panelphuthuocham2.Location = new System.Drawing.Point(418, 37);
             this.panelphuthuocham2.Name = "panelphuthuocham2";
-            this.panelphuthuocham2.Size = new System.Drawing.Size(378, 154);
+            this.panelphuthuocham2.Size = new System.Drawing.Size(378, 107);
             this.panelphuthuocham2.TabIndex = 6;
             // 
             // comboBox4
@@ -144,7 +164,7 @@
             this.panelphuthuocham.Controls.Add(this.button1);
             this.panelphuthuocham.Location = new System.Drawing.Point(15, 37);
             this.panelphuthuocham.Name = "panelphuthuocham";
-            this.panelphuthuocham.Size = new System.Drawing.Size(400, 155);
+            this.panelphuthuocham.Size = new System.Drawing.Size(400, 107);
             this.panelphuthuocham.TabIndex = 5;
             // 
             // comboBox3
@@ -257,16 +277,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Vui Lòng Nhập Quan Hệ";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(493, 297);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 24);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Kết quả:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +325,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtF;
     }
 }
 
